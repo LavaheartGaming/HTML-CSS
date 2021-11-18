@@ -1,14 +1,26 @@
-body .projk-overall img{
+body .projk-overall img {
   width: 37%;
   display: flex;
 }
 
-body .projk-overall{
+body .projk-overall {
   display: block;
   text-align: center;
   font-size: 19px;
 }
 
+<<<<<<< HEAD
 .program{
   padding-top: 2%;
+=======
+.parallax-container {
+  height: 400px;
+}
+
+.program {
+  width: 400px;
+>>>>>>> 4f59033a457f8cb072660e738429944530579f66
+}
+.title {
+  margin-left: 275px;
 }
