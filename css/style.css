@@ -11,15 +11,10 @@ body .projk-overall {
 
 <<<<<<< HEAD
 .program{
-  padding-top: 2%;
+  padding-top: 5%;
 =======
 .parallax-container {
   height: 400px;
-}
-
-.program {
-  width: 400px;
->>>>>>> 4f59033a457f8cb072660e738429944530579f66
 }
 .title {
   margin-left: 275px;
