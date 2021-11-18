@@ -1,4 +1,7 @@
-function trashbackface() {
-  document.getElementById("demo").style.color.str: "5s" = "red";
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
 
-}
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
