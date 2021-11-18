@@ -16,24 +16,35 @@
       href="css/materialize.css"
       media="screen,projection"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <!-- Nav bar -->
 
     <nav class="projk-nav green darken-2">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Kevin's projects</a>
+        <a href="#" class="brand-logo center">Main page</a>
         <li><a href="Lavaheart.html">Quentin's projects</a></li>
       </div>
     </nav>
 
-
                       <!-- Global project -->
-    <div class="projk-overall"> <h1 class="center-align">My BTS project</h1>
+    <div class="projk-overall"><h1 class="center-align">My BTS project</h1>
       <div class="row">
-        <img class="col offset-s3" src="img/connected-trashback.png" alt="">
-        <span class="col offset-s1" style="padding-top: 150px;">Connected trash~back</span>
+        <img class="col s4 offset-s2" src="img/connected-trashback.png" alt="">
+        <span class="col s4 offset-s1 left-align"><h4 class="center-align">Put in situation</h4>
+          Glass recycling begins with collection. Containers
+          are made available to the public. The system is
+          based on citizenship, the sorting rules must be
+          respected but no control is carried out during the
+          deposit. When the containers are full, a free
+          telephone number allows the user to report it to the
+          collection company, which then delegates a dump
+          truck. This way of proceeding is hardly effective
+          because few citizens have the reflex to call. The full
+          containers being unusable, we often find the glass
+          left loose nearby by a few inciviles.
+        </span>
       </div>
       <div class="parallax-container">
         <div class="parallax"><img src="img/bts-sn.png"></div>
@@ -99,7 +110,7 @@
                 </div>
               <div class="card-reveal">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                  <span class="card-title grey-text text-darken-4"> <i class="material-icons right">close</i></span>
                   <img class="activator responsive-img" src="img/creating-C.png">
                 </div>
               </div>
@@ -116,8 +127,111 @@
           <br>Minimization of consumption
           <br>Low cost
           <br>minimuse printed circuit board size
+          <br>
+          <div class="program">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator centered responsive-img" src="img/organigramme.png">
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">There is the program of the organization chart<i class="material-icons right">close</i></span>
+              <p> #include < DetecteurM.h >
+                  <br>#include  < can-18F4580.c >
+                  <br>
+                  <br>#define CAN_USE_EXTENDED_ID FALSE 
+                  <br>#define CAN_BRG_SEG_2_PHASE_TS TRUE
+                  <br>#define CAN_BRG_PRESCALARD 15
+                  <br>#define CAN_BRG_SYNCH_JUMP_WIDTH 0 
+                  <br>#define CAN_BRG_PROPAGATION_TIME 2 
+                  <br>#define CAN_BRG_PHASE_SEGMENT_1 5
+                  <br>#define CAN_BRG_PHASE_SEGMENT_2 5
+                  <br>#define CAN_BRG_WAKE_FILTER TRUE
+                  <br>#define CAN_BRG_SAM FALSE
+                  <br>
+                  <br>void envoi_CAN(void);
+                  <br>void Trappe(void);
+                  <br>void Metal(void);
+                  <br>void rejeter(void);
+                  <br>void accepter_B(void);
+                  <br>
+                  <br>void main()
+                  <br> {
+                  	<br>setup_adc_ports(sAN2);
+                  	<br>setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
+                  	<br>can_init();
+                    <br>
+                  	<br>while(TRUE)
+                  	<br>{
+                  		<br>Metal();
+                  		<br>Trappe();
+                  		<br>envoie_CAN();
+                  		<br>delay_ms(100);
+                  	<br>}
+                  <br>}
+                  <br>
+                  <br>void envoi_CAN(void)
+                  <br>{
+                  	<br>txbuffer[0]=0x11;
+                  	<br>xbuffer[1]=0x22;
+                  	<br>an_putd(0x200, &txbuffer[0], 2, 0, FALSE, 0);
+                  <br>}
+                  <br>
+                  <br>void Trappe(void)
+                  <br>{
+                  	<br>if( rejeter )
+                  	<br>{
+                  		<br>output_high(PIN_C1);
+                  		<br>output_low(PIN_C3);
+                  		<br>output_high(PIN_C4);
+                  		<br>output_low(PIN_C5);
+                  		<br>output_high(PIN_C12);
+                  		<br>delay_ms(1000);
+                  	<br>}
+                  	<br>else
+                  	<br>{
+                  		<br>output_low(PIN_C1);
+                  		<br>output_low(PIN_C3);
+                  		<br>output_high(PIN_C4);
+                  		<br>output_low(PIN_C5);
+                  		<br>output_high(PIN_C2);
+                  		<br>delay_ms(1500);
+                  	<br>}
+                  <br>}
+                  <br>
+                  <br>void Metal(void)
+                  <br>{
+                  	<br>if (input(PIN_B0)==1)
+                  	<br>{
+                  		<br>output_low(PIN_C0);
+                  		<br>rejeter();
+                  	<br>}
+                  	<br>else
+                  	<br>{
+                  		<br>output_high(PIN_C0);
+                  		<br>accepter_B();
+                  	<br>}
+                  <br>}
+                  <br>
+                  <br>void rejeter(void)
+                  <br>{
+                  	<br>output_high(PIN_B5);
+                  	<br>delay_ms(1000);
+                  	<br>output_low(PIN_B5);
+                  <br>}
+                  <br>
+                  <br>void accepter_B(void)
+                  <br>{
+                  	<br>output_high(PIN_A3);
+                  	<br>delay_ms(1000);
+                  	<br>output_low(PIN_A3);
+                  <br>}
+                </p>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
+
                     <!-- Carousel Start->
         <div class="carousel">
           <a class="carousel-item" href="#one!"><img src="img/creating-C.png"></a>
@@ -128,109 +242,8 @@
         </div>
                     <! - Carousel End-->
 
-      <div class="program row">
-      <div class="card col s12 ">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator centered responsive-img" src="img/organigramme.png">
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">There is the program of the organization chart<i class="material-icons right">close</i></span>
-          <p> #include < DetecteurM.h >
-              <br>#include  < can-18F4580.c >
-              <br>
-              <br>#define CAN_USE_EXTENDED_ID FALSE 
-              <br>#define CAN_BRG_SEG_2_PHASE_TS TRUE
-              <br>#define CAN_BRG_PRESCALARD 15
-              <br>#define CAN_BRG_SYNCH_JUMP_WIDTH 0 
-              <br>#define CAN_BRG_PROPAGATION_TIME 2 
-              <br>#define CAN_BRG_PHASE_SEGMENT_1 5
-              <br>#define CAN_BRG_PHASE_SEGMENT_2 5
-              <br>#define CAN_BRG_WAKE_FILTER TRUE
-              <br>#define CAN_BRG_SAM FALSE
-              <br>
-              <br>void envoi_CAN(void);
-              <br>void Trappe(void);
-              <br>void Metal(void);
-              <br>void rejeter(void);
-              <br>void accepter_B(void);
-              <br>
-              <br>void main()
-              <br> {
-              	<br>setup_adc_ports(sAN2);
-              	<br>setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
-              	<br>can_init();
-                <br>
-              	<br>while(TRUE)
-              	<br>{
-              		<br>Metal();
-              		<br>Trappe();
-              		<br>envoie_CAN();
-              		<br>delay_ms(100);
-              	<br>}
-              <br>}
-              <br>
-              <br>void envoi_CAN(void)
-              <br>{
-              	<br>txbuffer[0]=0x11;
-              	<br>xbuffer[1]=0x22;
-              	<br>an_putd(0x200, &txbuffer[0], 2, 0, FALSE, 0);
-              <br>}
-              <br>
-              <br>void Trappe(void)
-              <br>{
-              	<br>if( rejeter )
-              	<br>{
-              		<br>output_high(PIN_C1);
-              		<br>output_low(PIN_C3);
-              		<br>output_high(PIN_C4);
-              		<br>output_low(PIN_C5);
-              		<br>output_high(PIN_C12);
-              		<br>delay_ms(1000);
-              	<br>}
-              	<br>else
-              	<br>{
-              		<br>output_low(PIN_C1);
-              		<br>output_low(PIN_C3);
-              		<br>output_high(PIN_C4);
-              		<br>output_low(PIN_C5);
-              		<br>output_high(PIN_C2);
-              		<br>delay_ms(1500);
-              	<br>}
-              <br>}
-              <br>
-              <br>void Metal(void)
-              <br>{
-              	<br>if (input(PIN_B0)==1)
-              	<br>{
-              		<br>output_low(PIN_C0);
-              		<br>rejeter();
-              	<br>}
-              	<br>else
-              	<br>{
-              		<br>output_high(PIN_C0);
-              		<br>accepter_B();
-              	<br>}
-              <br>}
-              <br>
-              <br>void rejeter(void)
-              <br>{
-              	<br>output_high(PIN_B5);
-              	<br>delay_ms(1000);
-              	<br>output_low(PIN_B5);
-              <br>}
-              <br>
-              <br>void accepter_B(void)
-              <br>{
-              	<br>output_high(PIN_A3);
-              	<br>delay_ms(1000);
-              	<br>output_low(PIN_A3);
-              <br>}
-            </p>
-        </div>
-      </div>
-      </div>
-      <!-- Footer -->
 
+      <!-- Footer -->
       <footer>
 
 
