@@ -1,3 +1,27 @@
+.intro .parallax-container{
+  height: 500px;
+}
+
+body .caracters_img img{
+  width: 150px;
+  height: 150px;
+}
+.caracters_img{
+  background-image: url(../img/C-carac-background.png);
+  background-size: 100% 100%;
+}
+body .projk2-overall .parallax-container {
+  height: 350px;
+}
+.about-p{
+  background-image: url(../img/text_border.png);
+  background-size: 100% 100%;
+}
+.Ctitle{
+  background-image: url(../img/text_border.png);
+  background-size: 100% 100%;
+}
+
 body .projk-overall img {
   width: 37%;
   display: flex;
@@ -9,13 +33,16 @@ body .projk-overall {
   font-size: 19px;
 }
 
-<<<<<<< HEAD
 .program{
   padding-top: 5%;
-=======
-.parallax-container {
-  height: 400px;
 }
 .title {
   margin-left: 275px;
+}
+.audie{
+  background-color: red;
+}
+
+.uneimage{
+  background-image: url(../full.png);
 }
