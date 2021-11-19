@@ -1,58 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.css"
+      media="screen,projection"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Nav bar -->
-
-    <nav class="projk-nav green darken-2">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Kevin's projects</a>
-        <li><a href="Lavaheart.html">Quentin's projects</a></li>
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="kevin-p1.html">kevin's project1</a></li>
+              <li><a href="kevin-p2.html">kevin's project2</a></li>
+              <li class="divider"></li>
+              <li><a href="Lavaheart.html">Geometry dash project</a></li>
+            </ul>
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">Main Page</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">About us</a></li>
+                <li><a href="badges.html">Contact us</a></li>
+                <!-- Dropdown Trigger -->
+                <li>
+                  <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+                    >Dropdown<i class="material-icons right"
+                      >arrow_drop_down</i
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-
-                      <!-- Global project -->
-    <div class="projk-overall"><h1 class="center-align">My BTS project</h1>
+    </header>
+    <!-- Global project -->
+    <div class="projk-overall">
+      <h1 class="center-align">My BTS project</h1>
       <div class="row">
-        <img class="col s4 offset-s2" src="img/connected-trashback.png" alt="">
-        <span class="col s4 offset-s1 left-align"><h4 class="center-align">Put in situation</h4>
-          Glass recycling begins with collection. Containers
-          are made available to the public. The system is
-          based on citizenship, the sorting rules must be
-          respected but no control is carried out during the
-          deposit. When the containers are full, a free
-          telephone number allows the user to report it to the
-          collection company, which then delegates a dump
-          truck. This way of proceeding is hardly effective
-          because few citizens have the reflex to call. The full
-          containers being unusable, we often find the glass
-          left loose nearby by a few inciviles.
+        <img
+          class="col s4 offset-s2"
+          src="img/connected-trashback.png"
+          alt=""
+        />
+        <span class="col s4 offset-s1 left-align"
+          ><h4 class="center-align">Put in situation</h4>
+          Glass recycling begins with collection. Containers are made available
+          to the public. The system is based on citizenship, the sorting rules
+          must be respected but no control is carried out during the deposit.
+          When the containers are full, a free telephone number allows the user
+          to report it to the collection company, which then delegates a dump
+          truck. This way of proceeding is hardly effective because few citizens
+          have the reflex to call. The full containers being unusable, we often
+          find the glass left loose nearby by a few inciviles.
         </span>
       </div>
       <div class="parallax-container">
-        <div class="parallax"><img src="img/bts-sn.png"></div>
+        <div class="parallax"><img src="img/bts-sn.png" /></div>
       </div>
     </div>
 
-                      <!-- Project presentation -->
+    <!-- Project presentation -->
     <div class="projk-presentation row">
       <h2 class="center-align">Project presentation</h2>
-      <p class="col s10 offset-s1">The town hall of Montluçon is interested in a monitoring system measuring the filling rate of each container and transmitting this data
-        to a cloud. This real-time monitoring of the condition of each container would provide users with a collection service that is always
-        operational. It would also make it possible to optimize the routes of dump trucks having an impact on the cost of transport but also on
-        the environment by reducing the mileage traveled. The glass containers will be connected via the Sigfox network. The data of each
-        container will be accessible online by website. The monitoring system must be self-sufficient in energy, and will be powered by a solar
-        panel as well as with a back-up battery. The glass once collected is transformed into cullet after having undergone a whole series of
-        sorting to eliminate unwanted materials. One idea to facilitate this sorting is to detect metal during collection in order to remove metal objects. The container will be equipped with a hatch rejecting metal objects.</p>
+      <p class="col s10 offset-s1">
+        The town hall of Montluçon is interested in a monitoring system
+        measuring the filling rate of each container and transmitting this data
+        to a cloud. This real-time monitoring of the condition of each container
+        would provide users with a collection service that is always
+        operational. It would also make it possible to optimize the routes of
+        dump trucks having an impact on the cost of transport but also on the
+        environment by reducing the mileage traveled. The glass containers will
+        be connected via the Sigfox network. The data of each container will be
+        accessible online by website. The monitoring system must be
+        self-sufficient in energy, and will be powered by a solar panel as well
+        as with a back-up battery. The glass once collected is transformed into
+        cullet after having undergone a whole series of sorting to eliminate
+        unwanted materials. One idea to facilitate this sorting is to detect
+        metal during collection in order to remove metal objects. The container
+        will be equipped with a hatch rejecting metal objects.
+      </p>
     </div>
     <div class="projk-connected-tb">
       <table class="centered">
@@ -63,173 +105,139 @@
             <th>control method</th>
           </tr>
         </thead>
-          <tr>
-            <td>Power up</td>
-            <td>battery recharge + power distribution</td>
-            <td>
-              visual / sound information <br />
-              + multimeter voltage measurement
-            </td>
-          </tr>
-          <tr>
-            <td>Trappe management</td>
-            <td>correct positioning of the glass</td>
-            <td>visual test with various objects</td>
-          </tr>
-          <tr>
-            <td>SIGFOX broadcast</td>
-            <td>values ​​consistent with the measurements</td>
-            <td>web page via Cloud Atim</td>
-          </tr>
+        <tr>
+          <td>Power up</td>
+          <td>battery recharge + power distribution</td>
+          <td>
+            visual / sound information <br />
+            + multimeter voltage measurement
+          </td>
+        </tr>
+        <tr>
+          <td>Trappe management</td>
+          <td>correct positioning of the glass</td>
+          <td>visual test with various objects</td>
+        </tr>
+        <tr>
+          <td>SIGFOX broadcast</td>
+          <td>values ​​consistent with the measurements</td>
+          <td>web page via Cloud Atim</td>
+        </tr>
       </table>
     </div>
 
     <!-- My job -->
 
     <div class="myjobs">
-      <div class="center-align"><h4><br>My jobs<br></h4></div>
+      <div class="center-align">
+        <h4><br />My jobs<br /></h4>
+      </div>
       <div class="row">
         <div class="col s3 offset-s2"><h5>Object of the study</h5></div>
         <div class="col s2 offset-s3"><h5>Constraint</h5></div>
-        <div class="col s5 offset-s1"><br>Study and production of an electronic card making it possible to: Control the
-            geared motor via a power interface (H-bridge)!Communicate with the other
-            two cards via a CAN bus! Detect metal objects! Measure motor current
-            <br>
-            <br>
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator responsive-img" src="img/schstru.png">
-                </div>
-              <div class="card-reveal">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                  <img class="activator responsive-img" src="img/creating-C.png">
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="col s4 offset-s1">
-          <br>Using a microcontroller
-          <br>Use of component MCP2551 or equivalent for the CAN interface
-          <br>Using an H-bridge module
-          <br>Using the inductive sensor for metal detection
-          <br>Use of mechanical or hall effect limit switch for the hatch
-          <br>Use of components for measuring motor current
-          <br>Use of a USB-UART box for diagnostics
-          <br>Minimization of consumption
-          <br>Low cost
-          <br>Minimuse printed circuit board size
-          <br>
-          <div class="program">
+        <div class="col s5 offset-s1">
+          <br />Study and production of an electronic card making it possible
+          to: Control the geared motor via a power interface
+          (H-bridge)!Communicate with the other two cards via a CAN bus! Detect
+          metal objects! Measure motor current
+          <br />
+          <br />
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator responsive-img" src="img/organigramme.png">
+              <img class="activator responsive-img" src="img/schstru.png" />
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">There is the program of the organization chart<i class="material-icons right">close</i></span>
-              <p> #include < DetecteurM.h >
-                  <br>#include  < can-18F4580.c >
-                  <br>
-                  <br>#define CAN_USE_EXTENDED_ID FALSE 
-                  <br>#define CAN_BRG_SEG_2_PHASE_TS TRUE
-                  <br>#define CAN_BRG_PRESCALARD 15
-                  <br>#define CAN_BRG_SYNCH_JUMP_WIDTH 0 
-                  <br>#define CAN_BRG_PROPAGATION_TIME 2 
-                  <br>#define CAN_BRG_PHASE_SEGMENT_1 5
-                  <br>#define CAN_BRG_PHASE_SEGMENT_2 5
-                  <br>#define CAN_BRG_WAKE_FILTER TRUE
-                  <br>#define CAN_BRG_SAM FALSE
-                  <br>
-                  <br>void envoi_CAN(void);
-                  <br>void Trappe(void);
-                  <br>void Metal(void);
-                  <br>void rejeter(void);
-                  <br>void accepter_B(void);
-                  <br>
-                  <br>void main()
-                  <br> {
-                  	<br>setup_adc_ports(sAN2);
-                  	<br>setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
-                  	<br>can_init();
-                    <br>
-                  	<br>while(TRUE)
-                  	<br>{
-                  		<br>Metal();
-                  		<br>Trappe();
-                  		<br>envoie_CAN();
-                  		<br>delay_ms(100);
-                  	<br>}
-                  <br>}
-                  <br>
-                  <br>void envoi_CAN(void)
-                  <br>{
-                  	<br>txbuffer[0]=0x11;
-                  	<br>xbuffer[1]=0x22;
-                  	<br>an_putd(0x200, &txbuffer[0], 2, 0, FALSE, 0);
-                  <br>}
-                  <br>
-                  <br>void Trappe(void)
-                  <br>{
-                  	<br>if( rejeter )
-                  	<br>{
-                  		<br>output_high(PIN_C1);
-                  		<br>output_low(PIN_C3);
-                  		<br>output_high(PIN_C4);
-                  		<br>output_low(PIN_C5);
-                  		<br>output_high(PIN_C12);
-                  		<br>delay_ms(1000);
-                  	<br>}
-                  	<br>else
-                  	<br>{
-                  		<br>output_low(PIN_C1);
-                  		<br>output_low(PIN_C3);
-                  		<br>output_high(PIN_C4);
-                  		<br>output_low(PIN_C5);
-                  		<br>output_high(PIN_C2);
-                  		<br>delay_ms(1500);
-                  	<br>}
-                  <br>}
-                  <br>
-                  <br>void Metal(void)
-                  <br>{
-                  	<br>if (input(PIN_B0)==1)
-                  	<br>{
-                  		<br>output_low(PIN_C0);
-                  		<br>rejeter();
-                  	<br>}
-                  	<br>else
-                  	<br>{
-                  		<br>output_high(PIN_C0);
-                  		<br>accepter_B();
-                  	<br>}
-                  <br>}
-                  <br>
-                  <br>void rejeter(void)
-                  <br>{
-                  	<br>output_high(PIN_B5);
-                  	<br>delay_ms(1000);
-                  	<br>output_low(PIN_B5);
-                  <br>}
-                  <br>
-                  <br>void accepter_B(void)
-                  <br>{
-                  	<br>output_high(PIN_A3);
-                  	<br>delay_ms(1000);
-                  	<br>output_low(PIN_A3);
-                  <br>}
-                </p>
+              <div class="card-image waves-effect waves-block waves-light">
+                <span class="card-title grey-text text-darken-4"
+                  ><i class="material-icons right">close</i></span
+                >
+                <img
+                  class="activator responsive-img"
+                  src="img/creating-C.png"
+                />
+              </div>
             </div>
           </div>
+        </div>
+        <div class="col s4 offset-s1">
+          <br />Using a microcontroller <br />Use of component MCP2551 or
+          equivalent for the CAN interface <br />Using an H-bridge module
+          <br />Using the inductive sensor for metal detection <br />Use of
+          mechanical or hall effect limit switch for the hatch <br />Use of
+          components for measuring motor current <br />Use of a USB-UART box for
+          diagnostics <br />Minimization of consumption <br />Low cost
+          <br />Minimuse printed circuit board size
+          <br />
+          <div class="program">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img
+                  class="activator responsive-img"
+                  src="img/organigramme.png"
+                />
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"
+                  >There is the program of the organization chart<i
+                    class="material-icons right"
+                    >close</i
+                  ></span
+                >
+                <p>
+                  #include < DetecteurM.h > <br />#include < can-18F4580.c >
+                  <br />
+                  <br />#define CAN_USE_EXTENDED_ID FALSE <br />#define
+                  CAN_BRG_SEG_2_PHASE_TS TRUE <br />#define CAN_BRG_PRESCALARD
+                  15 <br />#define CAN_BRG_SYNCH_JUMP_WIDTH 0 <br />#define
+                  CAN_BRG_PROPAGATION_TIME 2 <br />#define
+                  CAN_BRG_PHASE_SEGMENT_1 5 <br />#define
+                  CAN_BRG_PHASE_SEGMENT_2 5 <br />#define CAN_BRG_WAKE_FILTER
+                  TRUE <br />#define CAN_BRG_SAM FALSE
+                  <br />
+                  <br />void envoi_CAN(void); <br />void Trappe(void);
+                  <br />void Metal(void); <br />void rejeter(void); <br />void
+                  accepter_B(void);
+                  <br />
+                  <br />void main() <br />
+                  { <br />setup_adc_ports(sAN2);
+                  <br />setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
+                  <br />can_init();
+                  <br />
+                  <br />while(TRUE) <br />{ <br />Metal(); <br />Trappe();
+                  <br />envoie_CAN(); <br />delay_ms(100); <br />} <br />}
+                  <br />
+                  <br />void envoi_CAN(void) <br />{ <br />txbuffer[0]=0x11;
+                  <br />xbuffer[1]=0x22; <br />an_putd(0x200, &txbuffer[0], 2,
+                  0, FALSE, 0); <br />}
+                  <br />
+                  <br />void Trappe(void) <br />{ <br />if( rejeter ) <br />{
+                  <br />output_high(PIN_C1); <br />output_low(PIN_C3);
+                  <br />output_high(PIN_C4); <br />output_low(PIN_C5);
+                  <br />output_high(PIN_C12); <br />delay_ms(1000); <br />}
+                  <br />else <br />{ <br />output_low(PIN_C1);
+                  <br />output_low(PIN_C3); <br />output_high(PIN_C4);
+                  <br />output_low(PIN_C5); <br />output_high(PIN_C2);
+                  <br />delay_ms(1500); <br />} <br />}
+                  <br />
+                  <br />void Metal(void) <br />{ <br />if (input(PIN_B0)==1)
+                  <br />{ <br />output_low(PIN_C0); <br />rejeter(); <br />}
+                  <br />else <br />{ <br />output_high(PIN_C0);
+                  <br />accepter_B(); <br />} <br />}
+                  <br />
+                  <br />void rejeter(void) <br />{ <br />output_high(PIN_B5);
+                  <br />delay_ms(1000); <br />output_low(PIN_B5); <br />}
+                  <br />
+                  <br />void accepter_B(void) <br />{ <br />output_high(PIN_A3);
+                  <br />delay_ms(1000); <br />output_low(PIN_A3); <br />}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      </div>
-      <!-- Footer -->
-      <footer>
-
-
-      </footer>
+    </div>
+    <!-- Footer -->
+    <footer></footer>
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
