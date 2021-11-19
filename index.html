@@ -32,14 +32,14 @@
               <li><a href="Lavaheart.html">Geometry dash project</a></li>
             </ul>
             <div class="nav-wrapper">
-              <a href="#!" class="brand-logo">Main Page</a>
+              <a href="index.html" class="brand-logo">Main Page</a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">About us</a></li>
                 <li><a href="badges.html">Contact us</a></li>
                 <!-- Dropdown Trigger -->
                 <li>
                   <a class="dropdown-trigger" href="#!" data-target="dropdown1"
-                    >Dropdown<i class="material-icons right"
+                    >projects<i class="material-icons right"
                       >arrow_drop_down</i
                     ></a
                   >
@@ -50,7 +50,8 @@
         </nav>
       </div>
     </header>
-    <div class="col s1 offset-s1">
+    <!--<img src="img/bg.png" alt="background image" class="bg" />-->
+    <div class="title">
       <h1>e-sport</h1>
     </div>
     <div class="card1">
@@ -83,13 +84,69 @@
             of my life and that i intend to pursue this passion as a game dev.
           </p>
         </div>
-        <div class="col s3 offset-s1">
-          <img src="img/homm5.jpg" alt="Homm5 gameplay preview" />
+        <div class="col s5 offset-s2">
+          <img
+            src="img/homm5.jpg"
+            alt="Homm5 gameplay preview"
+            class="responsive"
+          />
         </div>
       </div>
     </div>
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                placeholder="Placeholder"
+                id="first_name"
+                type="text"
+                class="validate"
+              />
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" />
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row"></div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" />
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              This is an inline input field:
+              <div class="input-field inline">
+                <input id="email_inline" type="email" class="validate" />
+                <label for="email_inline">Email</label>
+                <span
+                  class="helper-text"
+                  data-error="wrong"
+                  data-success="right"
+                  >Helper text</span
+                >
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </footer>
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
