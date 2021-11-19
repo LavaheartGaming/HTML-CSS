@@ -1,6 +1,3 @@
-.intro .parallax-container{
-  height: 500px;
-}
 
 body .caracters_img img{
   width: 150px;
@@ -13,26 +10,29 @@ body .caracters_img img{
 body .projk2-overall .parallax-container {
   height: 350px;
 }
-.about-p{
-  background-image: url(../img/text_border.png);
-  background-size: 100% 100%;
+body .before img{
+  width: 450%;
 }
-.Ctitle{
-  background-image: url(../img/text_border.png);
-  background-size: 100% 100%;
+body .beefore img{
+  width: 150%;
 }
-
-body .projk-overall img {
+body .projk-overall img .parallax-container {
+  height: 350px;
   width: 37%;
   display: flex;
 }
-
+.iceland{
+  background-image: url(../img/iceland-animal-crossing.jpg);
+  background-size: 100% 100%;
+}
+.biggest{
+  font-size: 2em;
+}
 body .projk-overall {
   display: block;
   text-align: center;
   font-size: 19px;
 }
-
 .program{
   padding-top: 5%;
 }
@@ -42,7 +42,19 @@ body .projk-overall {
 .audie{
   background-color: red;
 }
-
 .uneimage{
   background-image: url(../full.png);
+}
+.iceland{
+  margin-bottom: 0;
+}
+body .Ctitle h4{
+  margin-top: 0;
+}
+.projk-presentation{
+  margin-bottom: 0;
+  background-image: url(../img/fireworks.png);
+}
+.ccters{
+  margin-bottom: 0;
 }
