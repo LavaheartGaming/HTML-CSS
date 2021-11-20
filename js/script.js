@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function(){
    $('.tooltipped').tooltip();
  });
-
-
  $(document).ready(function(){
    $('.modal').modal();
+ });
+ $(document).ready(function(){
+   $('.slider').slider();
  });

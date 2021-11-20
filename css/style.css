@@ -16,9 +16,11 @@ body .before img{
 body .beefore img{
   width: 150%;
 }
-body .projk-overall img .parallax-container {
+body .parallax-container img{
+  width: 100%;
+}
+body .projk-overall .parallax-container{
   height: 350px;
-  width: 37%;
   display: flex;
 }
 .iceland{
@@ -57,7 +59,4 @@ body .Ctitle h4{
 }
 .ccters{
   margin-bottom: 0;
-}
-.proj2-end{
-  background-color: green;
 }
