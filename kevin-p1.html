@@ -41,13 +41,13 @@
     <div class="projk-overall">
       <h1 class="center-align">My BTS project</h1>
       <div class="row">
-        <img id="trashsmile" class="col s4 offset-s2" src="img/connected-trashback.png" alt="">
+        <img id="trashnosmile" class="col s4 offset-s2" src="img/connected-trashback.png" alt="">
         <span class="col s4 offset-s1 left-align"><h4 class="center-align">Put in situation</h4>
           Glass recycling begins with collection. Containers
           are made available to the public. The system is
           based on citizenship, the sorting rules must be
           respected but no control is carried out during the
-          deposit. When the containers are <span class="trashnosmile()">full</span>, a free
+          deposit. When the containers are <span onclic="trashsmile()">full</span>, a free
           telephone number allows the user to report it to the
           collection company, which then delegates a dump
           truck. This way of proceeding is hardly effective
@@ -56,15 +56,15 @@
           left loose nearby by a few inciviles.
         </span>
       </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="img/bts-sn.png"/></div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="img/bts-sn.png"/></div>
+      </div>
     </div>
 
                     <!-- Project presentation -->
     <div class="projk-presentations row">
       <h2 class="center-align">Project presentation</h2>
-      <p class="col s6 offset-s1">
+      <p class="col s7 offset-s1">
         The town hall of Montluçon is interested in a monitoring system
         measuring the filling rate of each container and transmitting this data
         to a cloud. This real-time monitoring of the condition of each container
@@ -95,9 +95,8 @@
         <tr>
           <td>Power up</td>
           <td>battery recharge + power distribution</td>
-          <td>
-            visual / sound information <br />
-            + multimeter voltage measurement
+          <td>visual / sound information
+            <br>+ multimeter voltage measurement
           </td>
         </tr>
         <tr>
@@ -138,143 +137,154 @@
               <div class="col s2 offset-s1">
               <ul class="slides">
                 <li>
-                  <img src="img/vnh-test.png"> <!-- random image -->
+                  <img src="img/vnh-test.png"> <!-- VNH -->
                   <div class="caption center-align">
                     <h3 class="black-text">Testing of the "VNH7070" </h3>
                     <h5 class="light green darken-2">The VNH is used for the rotate.</h5>
                   </div>
                 </li>
                 <li>
-                  <img src="img/test.png"> <!-- random image -->
+                  <img src="img/test.png"> <!--  -->
                   <div class="caption left-align">
-                    <h3>Test of the metal sensor</h3>
+                    <h3>The test of the metal sensor</h3>
                   </div>
                 </li>
                 <li>
                   <img src="img/test2.png"> <!-- random image -->
-                  <div class="caption right-align">
-                    <h3 class="pink-text">To check the test</h3>
-                    <h5 class="light pink-text">We can use the multimeter.</h5>
+                  <div class="caption">
+                    <h3 class="black">For the tests we can use the multimeter</h3>
                   </div>
                 </li>
                 <li>
                   <img src="img/test4.png"> <!-- random image -->
                   <div class="caption center-align">
-                    <h3>Or we can use the oscilloscope for watch de result </h3>
+                    <h3>Or we can also use an oscilloscope</h3>
                   </div>
                 </li>
               </ul>
-            </div>
+              </div>
             </div>
           </div>
-        <div class="col s4 offset-s1">
-          <br>Using a microcontroller
-          <br>Use of component MCP2551 or equivalent for the CAN interface
-          <br>Using an H-bridge module
-          <br>Using the inductive sensor for metal detection
-          <br>Use of mechanical or hall effect limit switch for the hatch
-          <br>Use of components for measuring motor current
-          <br>Use of a USB-UART box for diagnostics
-          <br>Minimization of consumption
-          <br>Low cost
-          <br>Minimuse printed circuit board size
-          <br>
-          <div class="program">
+          <div class="col s4 offset-s1">
+            <br>Using a microcontroller
+            <br>Use of component MCP2551 or equivalent for the CAN interface
+            <br>Using an H-bridge module
+            <br>Using the inductive sensor for metal detection
+            <br>Use of mechanical or hall effect limit switch for the hatch
+            <br>Use of components for measuring motor current
+            <br>Use of a USB-UART box for diagnostics
+            <br>Minimization of consumption
+            <br>Low cost
+            <br>Minimuse printed circuit board size
+            <br>
+            <div class="program">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img
-                  class="activator responsive-img"
-                  src="img/organigramme.png"
-                />
+                <img class="activator responsive-img" src="img/organigramme.png">
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"
-                  >There is the program of the organization chart<i
-                    class="material-icons right"
-                    >close</i
-                  ></span
-                >
-                <p>
-                  #include < DetecteurM.h > <br />#include < can-18F4580.c >
-                  <br />
-                  <br />#define CAN_USE_EXTENDED_ID FALSE <br />#define
-                  CAN_BRG_SEG_2_PHASE_TS TRUE <br />#define CAN_BRG_PRESCALARD
-                  15 <br />#define CAN_BRG_SYNCH_JUMP_WIDTH 0 <br />#define
-                  CAN_BRG_PROPAGATION_TIME 2 <br />#define
-                  CAN_BRG_PHASE_SEGMENT_1 5 <br />#define
-                  CAN_BRG_PHASE_SEGMENT_2 5 <br />#define CAN_BRG_WAKE_FILTER
-                  TRUE <br />#define CAN_BRG_SAM FALSE
-                  <br />
-                  <br />void envoi_CAN(void); <br />void Trappe(void);
-                  <br />void Metal(void); <br />void rejeter(void); <br />void
-                  accepter_B(void);
-                  <br />
-                  <br />void main() <br />
-                  { <br />setup_adc_ports(sAN2);
-                  <br />setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
-                  <br />can_init();
-                  <br />
-                  <br />while(TRUE) <br />{ <br />Metal(); <br />Trappe();
-                  <br />envoie_CAN(); <br />delay_ms(100); <br />} <br />}
-                  <br />
-                  <br />void envoi_CAN(void) <br />{ <br />txbuffer[0]=0x11;
-                  <br />xbuffer[1]=0x22; <br />an_putd(0x200, &txbuffer[0], 2,
-                  0, FALSE, 0); <br />}
-                  <br />
-                  <br />void Trappe(void) <br />{ <br />if( rejeter ) <br />{
-                  <br />output_high(PIN_C1); <br />output_low(PIN_C3);
-                  <br />output_high(PIN_C4); <br />output_low(PIN_C5);
-                  <br />output_high(PIN_C12); <br />delay_ms(1000); <br />}
-                  <br />else <br />{ <br />output_low(PIN_C1);
-                  <br />output_low(PIN_C3); <br />output_high(PIN_C4);
-                  <br />output_low(PIN_C5); <br />output_high(PIN_C2);
-                  <br />delay_ms(1500); <br />} <br />}
-                  <br />
-                  <br />void Metal(void) <br />{ <br />if (input(PIN_B0)==1)
-                  <br />{ <br />output_low(PIN_C0); <br />rejeter(); <br />}
-                  <br />else <br />{ <br />output_high(PIN_C0);
-                  <br />accepter_B(); <br />} <br />}
-                  <br />
-                  <br />void rejeter(void) <br />{ <br />output_high(PIN_B5);
-                  <br />delay_ms(1000); <br />output_low(PIN_B5); <br />}
-                  <br />
-                  <br />void accepter_B(void) <br />{ <br />output_high(PIN_A3);
-                  <br />delay_ms(1000); <br />output_low(PIN_A3); <br />}
-                </p>
+                <span class="card-title grey-text text-darken-4">There is the program of the organization chart<i class="material-icons right">close</i></span>
+                <p> #include < DetecteurM.h >
+                    <br>#include  < can-18F4580.c >
+                    <br>
+                    <br>#define CAN_USE_EXTENDED_ID FALSE 
+                    <br>#define CAN_BRG_SEG_2_PHASE_TS TRUE
+                    <br>#define CAN_BRG_PRESCALARD 15
+                    <br>#define CAN_BRG_SYNCH_JUMP_WIDTH 0 
+                    <br>#define CAN_BRG_PROPAGATION_TIME 2 
+                    <br>#define CAN_BRG_PHASE_SEGMENT_1 5
+                    <br>#define CAN_BRG_PHASE_SEGMENT_2 5
+                    <br>#define CAN_BRG_WAKE_FILTER TRUE
+                    <br>#define CAN_BRG_SAM FALSE
+                    <br>
+                    <br>void envoi_CAN(void);
+                    <br>void Trappe(void);
+                    <br>void Metal(void);
+                    <br>void rejeter(void);
+                    <br>void accepter_B(void);
+                    <br>
+                    <br>void main()
+                    <br> {
+                    	<br>setup_adc_ports(sAN2);
+                    	<br>setup_adc(ADC_CLOCK_INTERNAL |ADC_TAD_MUL_0);
+                    	<br>can_init();
+                      <br>
+                    	<br>while(TRUE)
+                    <br>{
+                    		<br>Metal();
+                    		<br>Trappe();
+                    		<br>envoie_CAN();
+                    		<br>delay_ms(100);
+                    <br>}
+                    <br>}
+                    <br>
+                    <br>void envoi_CAN(void)
+                    <br>{
+                    	<br>txbuffer[0]=0x11;
+                    	<br>xbuffer[1]=0x22;
+                    	<br>an_putd(0x200, &txbuffer[0], 2, 0, FALSE, 0);
+                    <br>}
+                    <br>
+                    <br>void Trappe(void)
+                    <br>{
+                    	<br>if( rejeter )
+                    	<br>{
+                    		<br>output_high(PIN_C1);
+                    		<br>output_low(PIN_C3);
+                    		<br>output_high(PIN_C4);
+                    		<br>output_low(PIN_C5);
+                    		<br>output_high(PIN_C12);
+                    		<br>delay_ms(1000);
+                    	<br>}
+                    	<br>else
+                    	<br>{
+                    		<br>output_low(PIN_C1);
+                    		<br>output_low(PIN_C3);
+                    		<br>output_high(PIN_C4);
+                    		<br>output_low(PIN_C5);
+                    		<br>output_high(PIN_C2);
+                    		<br>delay_ms(1500);
+                    	<br>}
+                    <br>}
+                    <br>
+                    <br>void Metal(void)
+                    <br>{
+                    	<br>if (input(PIN_B0)==1)
+                    	<br>{
+                    		<br>output_low(PIN_C0);
+                    		<br>rejeter();
+                    	<br>}
+                    	<br>else
+                    	<br>{
+                    		<br>output_high(PIN_C0);
+                    		<br>accepter_B();
+                    	<br>}
+                    <br>}
+                    <br>
+                    <br>void rejeter(void)
+                    <br>{
+                    	<br>output_high(PIN_B5);
+                    	<br>delay_ms(1000);
+                    	<br>output_low(PIN_B5);
+                    <br>}
+                    <br>
+                    <br>void accepter_B(void)
+                    <br>{
+                    	<br>output_high(PIN_A3);
+                    	<br>delay_ms(1000);
+                    	<br>output_low(PIN_A3);
+                    <br>}
+                  </p>
               </div>
             </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
-
     <!-- Footer -->
     <footer>
-      <div class="footers red accent-1">
-        <div class="footerW">
-          <a href="https://www.nintendo.co.uk/Support/Welcome-to-Nintendo-Support-11593.html" title="Support & Contact">Support & Comtact</a>
-          <a href="https://www.nintendo.co.uk/Support/Company-Information/Company-Information-1106807.html" title="Company Information">Company Information</a>
-          <a href="https://www.nintendo.co.uk/Corporate/Career/Career-Working-at-Nintendo-757078.html" title="Career">Career</a>
-          <a href="https://www.nintendo.co.uk/Legal-information/Website-Privacy-Policy/Website-Privacy-Policy-637785.html">Website Privacy Policy</a>
-        <p class="nothing">!</p>
-        <p>
-          <a class="petit" href="https://www.nintendo.co.uk/Legal-information/Website-Privacy-Policy/Website-Privacy-Policy-637785.html#trackingcookies">Cookie settings</a>
-          <a class="petit" href="https://www.nintendo.co.uk/Legal-information/Legal-information-757082.html">Legal information</a>
-          <a class="petit" href="https://www.nintendo.co.uk/Corporate/Corporate-Social-Responsibility-Report/Corporate-Social-Responsibility-Report-625944.html">CSR</a>
-          <a class="petit" href="https://www.nintendo.co.jp/csr/pdf/ModernSlaveryTransparencyStatement_en.pdf">Modern slavery transparency statement</a>
-          <a class="petit" href="https://www.nintendo.co.uk/Support/Contact/General-Customer-Service/Contact-Us-1106389.html?redirect=true#/">Nintendo's contact</a>
-        </p>
-      </div>
-        <p>
-          <div class="socilN">
-            <a target="_blank" title="Facebook" href="https://www.facebook.com/NintendoFR/?brand_redir=119240841493711" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="img/fb.png" alt="Facebook" /></a>
-            <a target="_blank" title="Twitter" href="https://twitter.com/NintendoFrance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><img src="img/twitter.png" alt="Twitter" /></a>
-          </div>
-          <div class="end">
-            © 2021 Nintendo
-          </div>
-        </p>
-      </div>
+
+
     </footer>
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.js" charset="utf-8"></script>
