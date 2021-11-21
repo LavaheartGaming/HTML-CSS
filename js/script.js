@@ -20,3 +20,6 @@ $(document).ready(function(){
  $(document).ready(function(){
    $('.slider').slider();
  });
+ function trashnosmile() {
+   document.getElementById('trashsmile()').src='img/connected-trashback2.jpg';
+ }
