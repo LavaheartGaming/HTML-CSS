@@ -1,5 +1,5 @@
 /* All pages */
-body .parallax-container img{
+body .parallax-container img {
   width: 100%;
 }
 footer{
@@ -12,7 +12,7 @@ footer{
 }
 
 /* Kevin's project N°1 */
-body .projk-overall .parallax-container{
+body .projk-overall .parallax-container {
   height: 350px;
   display: flex;
 }
@@ -37,10 +37,10 @@ body .caracters_img img {
 body .projk2-overall .parallax-container {
   height: 350px;
 }
-body .before img{
+body .before img {
   width: 450%;
 }
-body .beefore img{
+body .beefore img {
   width: 150%;
 }
 .iceland {
@@ -61,4 +61,25 @@ body .Ctitle h4 {
 }
 .ccters {
   margin-bottom: 0;
+}
+.bg {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.display {
+  display: flex;
+}
+.code {
+  width: 112%;
+  height: auto;
+  align: center;
+}
+.desc {
+  margin-left: 10%;
+  height: auto;
+  align: center;
 }
