@@ -1,31 +1,24 @@
-
-body .caracters_img img{
+body .caracters_img img {
   width: 150px;
   height: 150px;
 }
-.caracters_img{
+.caracters_img {
   background-image: url(../img/C-carac-background.png);
   background-size: 100% 100%;
 }
 body .projk2-overall .parallax-container {
   height: 350px;
 }
-body .before img{
-  width: 450%;
-}
-body .beefore img{
-  width: 150%;
-}
 body .projk-overall img .parallax-container {
   height: 350px;
   width: 37%;
   display: flex;
 }
-.iceland{
+.iceland {
   background-image: url(../img/iceland-animal-crossing.jpg);
   background-size: 100% 100%;
 }
-.biggest{
+.biggest {
   font-size: 2em;
 }
 body .projk-overall {
@@ -33,31 +26,41 @@ body .projk-overall {
   text-align: center;
   font-size: 19px;
 }
-.program{
+.program {
   padding-top: 5%;
 }
 .title {
   margin-left: 275px;
+  color: white;
 }
-.audie{
+.audie {
   background-color: red;
 }
-.uneimage{
+.uneimage {
   background-image: url(../full.png);
 }
-.iceland{
+.iceland {
   margin-bottom: 0;
 }
-body .Ctitle h4{
+body .Ctitle h4 {
   margin-top: 0;
 }
-.projk-presentation{
+.projk-presentation {
   margin-bottom: 0;
   background-image: url(../img/fireworks.png);
 }
-.ccters{
+.ccters {
   margin-bottom: 0;
 }
-.proj2-end{
+.proj2-end {
   background-color: green;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.bg {
+  background: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
