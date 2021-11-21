@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverEnabled: false,
   });
 });
-const setBg = () => {
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+const generateColor = () => {
+  let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
   document.body.style.backgroundColor = "#" + randomColor;
-  color.innerHTML = "#" + randomColor;
+  let text = document.querySelector("#colooor");
 };
-window.onclick = setBg;
