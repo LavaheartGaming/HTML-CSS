@@ -2,12 +2,9 @@
 body .parallax-container img{
   width: 100%;
 }
-body .projk-overall {
-  display: block;
-  text-align: center;
-  font-size: 19px;
+footer{
+  padding-bottom: 1%;
 }
-
 /* Quentin's project */
 .title {
   margin-left: 275px;
@@ -18,6 +15,11 @@ body .projk-overall {
 body .projk-overall .parallax-container{
   height: 350px;
   display: flex;
+}
+body .projk-overall {
+  display: block;
+  text-align: center;
+  font-size: 19px;
 }
 .program {
   padding-top: 5%;
