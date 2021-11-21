@@ -1,4 +1,29 @@
+/* All pages */
+body .parallax-container img{
+  width: 100%;
+}
+body .projk-overall {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+}
 
+/* Quentin's project */
+.title {
+  margin-left: 275px;
+  color: white;
+}
+
+/* Kevin's project N°1 */
+body .projk-overall .parallax-container{
+  height: 350px;
+  display: flex;
+}
+.program {
+  padding-top: 5%;
+}
+
+/* kevin's project n°2 */
 body .caracters_img img {
   width: 150px;
   height: 150px;
@@ -16,34 +41,12 @@ body .before img{
 body .beefore img{
   width: 150%;
 }
-body .parallax-container img{
-  width: 100%;
-}
-body .projk-overall .parallax-container{
-  height: 350px;
-  display: flex;
-}
 .iceland {
   background-image: url(../img/iceland-animal-crossing.jpg);
   background-size: 100% 100%;
 }
 .biggest {
   font-size: 2em;
-}
-body .projk-overall {
-  display: block;
-  text-align: center;
-  font-size: 19px;
-}
-.program {
-  padding-top: 5%;
-}
-.title {
-  margin-left: 275px;
-  color: white;
-}
-.audie {
-  background-color: red;
 }
 .iceland {
   margin-bottom: 0;
